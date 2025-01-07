@@ -1,4 +1,4 @@
-# UAS
+# PROJECT UAS BAHASA PEMROGRAMAN 
 
 NAMA  : ADINDA AULIA NABILA PUTRI
 
@@ -15,7 +15,7 @@ Program ini adalah aplikasi sederhana untuk sistem peminjaman buku berbasis term
 ```PYTHON
 # Class Data
 class BookData:
-    def __init__(self):
+    def _init_(self):
         self.books = [
             {"id": 1, "title": "Python Programming", "available": True},
             {"id": 2, "title": "Data Science 101", "available": True},
@@ -36,7 +36,6 @@ class BookData:
 
 # Class View
 class BookView:
-    @staticmethod
     def display_books(books):
         print("\nAvailable Books:")
         if books:
@@ -47,7 +46,6 @@ class BookView:
         else:
             print("No books available at the moment.")
 
-    @staticmethod
     def display_bookings(bookings):
         print("\nCurrent Bookings:")
         if bookings:
@@ -58,21 +56,18 @@ class BookView:
         else:
             print("No bookings made yet.")
 
-    @staticmethod
     def input_message(message):
         return input(message)
 
-    @staticmethod
     def error_message(message):
         print(f"Error: {message}")
 
-    @staticmethod
     def success_message(message):
         print(f"Success: {message}")
 
 # Class Process
 class BookProcess:
-    def __init__(self, data, view):
+    def _init_(self, data, view):
         self.data = data
         self.view = view
 
@@ -123,7 +118,7 @@ def main():
     process = BookProcess(data, view)
     process.run()
 
-if __name__ == "__main__":
+if __name__ == "_main_":
     main()
 ````
 
@@ -150,7 +145,7 @@ menyimpan data buku dalam bentuk list, setiap buku memiliki id, title, dan statu
         return [book for book in self.books if book["available"]]
 ````
 
-def get_available_books(self), mengembalikan daftra buku yang masih tersedia untuk dipinjam dan untuk menampilkan buku-buku yang statusnya available=true.
+def get_available_books(self), mengembalikan daftar buku yang masih tersedia untuk dipinjam dan untuk menampilkan buku-buku yang statusnya available=true.
 
 
 ```PYTHON
@@ -163,7 +158,7 @@ def book_a_book(self, book_id, name, days):
         return False
 ````
 
-Memproses peminjaman buku berdasarkan ID yang diberikan. Jika buku tersedia, statusnya diubah menjadi tidak tersedia dan data peminjaman ditambah ke bookings. Jika peminjaman berhasil maka rograman akan menampilkan True dan jika peminjaman tidaka berhasil maka program akan menampilkan false.
+Memproses peminjaman buku berdasarkan ID yang diberikan. Jika buku tersedia, statusnya diubah menjadi tidak tersedia dan data peminjaman ditambah ke bookings. Jika peminjaman berhasil maka rograman akan menampilkan True dan jika peminjaman tidak berhasil maka program akan menampilkan false.
 
 
 # Class View 
@@ -171,7 +166,6 @@ Memproses peminjaman buku berdasarkan ID yang diberikan. Jika buku tersedia, sta
 ```PYTHON
 # Class View
 class BookView:
-    @staticmethod
     def display_books(books):
         print("\nAvailable Books:")
         if books:
@@ -182,7 +176,6 @@ class BookView:
         else:
             print("No books available at the moment.")
 
-    @staticmethod
     def display_bookings(bookings):
         print("\nCurrent Bookings:")
         if bookings:
@@ -193,16 +186,13 @@ class BookView:
         else:
             print("No bookings made yet.")
 
-    @staticmethod
     def input_message(message):
         return input(message)
 
-    @staticmethod
     def error_message(message):
         print(f"Error: {message}")
 
-    @staticmethod
-    def success_message(message):
+   def success_message(message):
         print(f"Success: {message}")
 ````
 
@@ -220,7 +210,9 @@ class BookProcess:
 ````
 
 Class Book Process, untuk mengelola logika utama dari program dan menghubungkan bookdata dan bookview
+    
     * Data = Mengacu ke objek Bookdata untuk mendapatkan inforamsi tentang buku dan peminjaman. 
+    
     * View = Mengacu ke objek Bookview untuk menampilkan informasi kepada pengguna. 
 
 
@@ -274,7 +266,7 @@ Method Run, menyediakan menu utama interaktif bagi pengguna serta memiliki 4 ops
 
      * Memvalidasi input (jumlah hari harus diantar 1-30).
 
-     * Mengubah status buku menjadi tidak tersedia jika peminjaman berhasi.
+     * Mengubah status buku menjadi tidak tersedia jika peminjaman berhasil.
   4. Menampilka daftar buku peminjaman yang telah dilakukan.
   5. Keluar dari program.
 
@@ -296,11 +288,15 @@ if __name__ == "__main__":
 
 Fungsi main: 
   1. Membuat objek BookData, BookView, dan BookProcess.
-  2. Menjalankan Method Run daro BookProcess untuk memulai program. 
+  2. Menjalankan Method Run dari BookProcess untuk memulai program. 
 
 
 
+Berikut Hasil Outputnya 
 
+![Screenshot 2025-01-07 154431](https://github.com/user-attachments/assets/131460ee-8c6a-4660-94ab-9efef809f105)
+
+![Screenshot 2025-01-07 154445](https://github.com/user-attachments/assets/513c9eea-32f0-4bd0-b606-1c90f694cf7a)
 
 
 
